@@ -15,8 +15,10 @@ jobs:
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v2
-
-      # Install your linters here
+        run: npm i eslint
+        run: npm i prettier
+        run: npm i stylelint
+        # Install your linters here
 
       - name: Run linters
         uses: samuelmeuli/lint-action@v1
