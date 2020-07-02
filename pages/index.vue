@@ -3,7 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">
-        personal-website
+        Testing GitHub Actions
       </h1>
       <div class="links">
         <a
