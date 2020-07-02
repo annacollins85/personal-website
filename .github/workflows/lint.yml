@@ -31,6 +31,5 @@ jobs:
           github_token: ${{ secrets.github_token }}
           # Enable your linters here
           eslint: true
-          prettier: true
           stylelint: true
           stylelint_extensions: vue
