@@ -1,5 +1,5 @@
 <template>
-  <slice-zone type="home" uid="home" />
+  <slice-zone type="posts" uid="posts" />
 </template>
 
 <script>

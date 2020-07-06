@@ -1,5 +1,5 @@
 <template>
-  <slice-zone type="home" uid="home" />
+  <slice-zone type="workshop" uid="graphql-workshop" />
 </template>
 
 <script>
