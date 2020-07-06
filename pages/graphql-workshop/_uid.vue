@@ -1,5 +1,5 @@
 <template>
-  <slice-zone type="home" uid="home" />
+  <slice-zone type="workshop_part" :uid="$route.params.uid" />
 </template>
 
 <script>
