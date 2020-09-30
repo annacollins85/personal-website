@@ -1,7 +1,5 @@
 <template>
-  <div class="posts">
-    <slice-zone type="posts" uid="posts" />
-  </div>
+  <slice-zone type="posts" uid="posts-list" class="posts" />
 </template>
 
 <script>
@@ -15,9 +13,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.posts {
-  position: relative;
-  z-index: -1;
-  padding: 121px 56px 0;
+.posts,
+div > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 </style>

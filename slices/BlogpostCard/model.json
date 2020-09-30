@@ -5,32 +5,40 @@
   "icon" : "thumb_up",
   "display" : "list",
   "non-repeat" : {
+    "url" : {
+      "type" : "Link",
+      "config" : {
+        "label" : "url"
+      }
+    },
     "title" : {
       "type" : "StructuredText",
       "config" : {
+        "single" : "heading1",
         "label" : "Title",
-        "placeholder" : "This is where it all begins...",
-        "single" : "heading1"
+        "placeholder" : "This is where it all begins..."
       }
     },
     "description" : {
       "type" : "StructuredText",
       "config" : {
-        "multi" : "paragraph, strong, em, hyperlink",
-        "allowTargetBlank" : true,
+        "single" : "paragraph, strong, em, hyperlink",
         "label" : "Description"
       }
     },
-    "published_date" : {
-      "type" : "Date",
+    "image" : {
+      "type" : "Image",
       "config" : {
-        "label" : "published date"
+        "constraint" : { },
+        "thumbnails" : [ ],
+        "label" : "image"
       }
     },
-    "url" : {
-      "type" : "Link",
+    "date" : {
+      "type" : "StructuredText",
       "config" : {
-        "label" : "url"
+        "single" : "paragraph",
+        "label" : "date"
       }
     }
   }

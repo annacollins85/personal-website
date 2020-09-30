@@ -3,20 +3,10 @@
     <section class="intro">
       <div />
       <h1 class="title">Hello! 👋 I'm Anna, a JavaScript developer</h1>
-      <ScrollTo element="about-me" />
+      <div class="chevron">⌄</div>
     </section>
   </div>
 </template>
-
-<script>
-import ScrollTo from '~/components/common/ScrollTo'
-
-export default {
-  components: {
-    ScrollTo,
-  },
-}
-</script>
 
 <style lang="scss" scoped>
 .container {
@@ -33,5 +23,11 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   white-space: wrap;
+}
+.chevron {
+  text-align: center;
+  text-decoration: none;
+  font-size: 36px;
+  padding-bottom: 0.25rem;
 }
 </style>

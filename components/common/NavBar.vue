@@ -1,14 +1,18 @@
 <template>
   <header class="navbar">
-    <nuxt-link
+    <div
       v-for="link in links"
-      :key="link.to"
-      :to="link.to"
+      :key="link.text"
       class="navbar__link"
       :class="currentPath === link.to && 'navbar__link--current'"
     >
-      {{ link.text }}
-    </nuxt-link>
+      <a v-if="link.href" :href="link.href" target="_blank">
+        {{ link.text }}
+      </a>
+      <nuxt-link v-else :to="link.to">
+        {{ link.text }}
+      </nuxt-link>
+    </div>
   </header>
 </template>
 
@@ -26,7 +30,12 @@ export default {
           text: 'Posts',
         },
         {
-          to: '/graphql-workshop',
+          to: '/speaking',
+          text: 'Speaking',
+        },
+        {
+          href:
+            'https://www.notion.so/GraphQL-101-62cba1b6ab744b838e1225a3f1f551e2',
           text: 'GraphQL Workshop',
         },
         {
@@ -47,6 +56,8 @@ export default {
 <style lang="scss" scoped>
 .navbar {
   position: absolute;
+  display: flex;
+  justify-content: flex-end;
   top: 0;
   left: 0;
   padding: 48px;
@@ -59,9 +70,12 @@ export default {
     font-size: 16px;
     font-family: 'Merriweather', sans-serif;
     font-weight: 500;
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s;
+    a {
+      text-decoration: none;
+      color: black;
+      border-bottom: 2px solid transparent;
+      transition: border-bottom 0.3s;
+    }
     &:last-child {
       margin-right: 0;
     }

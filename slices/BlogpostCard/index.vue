@@ -1,5 +1,6 @@
 <template>
   <a :href="slice.primary.url" class="blogpost-card">
+    <img :src="slice.primary.image.url" alt="" class="blogpost-card__image" />
     <prismic-rich-text
       :field="slice.primary.title"
       class="blogpost-card__title"
@@ -8,6 +9,10 @@
     <prismic-rich-text
       :field="slice.primary.description"
       class="blogpost-card__description"
+    />
+    <prismic-rich-text
+      :field="slice.primary.date"
+      class="blogpost-card__date"
     />
   </a>
 </template>
