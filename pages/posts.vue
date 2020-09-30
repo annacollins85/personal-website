@@ -1,5 +1,7 @@
 <template>
-  <slice-zone type="posts" uid="posts" />
+  <div class="posts">
+    <slice-zone type="posts" uid="posts" />
+  </div>
 </template>
 
 <script>
@@ -11,3 +13,11 @@ export default {
   },
 }
 </script>
+
+<style lang="scss" scoped>
+.posts {
+  position: relative;
+  z-index: -1;
+  padding: 121px 56px 0;
+}
+</style>

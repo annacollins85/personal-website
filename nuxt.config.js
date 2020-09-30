@@ -62,13 +62,16 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['vue-essential-slices/src/styles/styles.scss'],
+  css: [
+    'vue-essential-slices/src/styles/styles.scss',
+    '~/assets/styles/index.scss',
+  ],
 
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [{ src: '~/plugins/vue-typer.js', ssr: false }],
 
   /*
    ** Auto import components
@@ -108,6 +111,7 @@ export default {
       },
     ],
     ['nuxt-sm'],
+    'vue-scrollto/nuxt',
   ],
 
   /*

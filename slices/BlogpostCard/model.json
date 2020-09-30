@@ -1,17 +1,37 @@
 {
-	"type": "Slice",
-	"fieldset": "BlogpostCard Template",
-	"description": "Template model for BlogpostCard",
-	"icon": "thumb_up",
-	"display": "list",
-	"non-repeat": {
-		"title": {
-			"type": "StructuredText",
-			"config": {
-				"single": "heading1",
-				"label": "Title",
-				"placeholder": "This is where it all begins..."
-			}
-		}
-	}
+  "type" : "Slice",
+  "fieldset" : "BlogpostCard Template",
+  "description" : "Template model for BlogpostCard",
+  "icon" : "thumb_up",
+  "display" : "list",
+  "non-repeat" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "label" : "Title",
+        "placeholder" : "This is where it all begins...",
+        "single" : "heading1"
+      }
+    },
+    "description" : {
+      "type" : "StructuredText",
+      "config" : {
+        "multi" : "paragraph, strong, em, hyperlink",
+        "allowTargetBlank" : true,
+        "label" : "Description"
+      }
+    },
+    "published_date" : {
+      "type" : "Date",
+      "config" : {
+        "label" : "published date"
+      }
+    },
+    "url" : {
+      "type" : "Link",
+      "config" : {
+        "label" : "url"
+      }
+    }
+  }
 }
