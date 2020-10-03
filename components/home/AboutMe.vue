@@ -12,7 +12,7 @@
         where I've worked for Holaluz, Typeform and currently I'm working
         remotely for Codegram. I love sharing my passion for coding through
         giving workshops and mentorship to aspiring developers. In my free time
-        you can usually find me up a mountain on my bike 🚲 or eating curry 🍛.
+        you can usually find me up a mountain on my bike 🚲.
       </div>
     </div>
   </section>

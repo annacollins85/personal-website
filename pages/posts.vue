@@ -19,10 +19,3 @@ export default {
   },
 }
 </script>
-
-<style lang="scss" scoped>
-.posts {
-  max-width: 812px;
-  margin: 0 auto;
-}
-</style>
