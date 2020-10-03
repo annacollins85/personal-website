@@ -1,19 +1,18 @@
 <template>
   <section id="about-me" class="container">
     <div class="about-me">
-      <div class="about-me__image">
+      <div v-in-viewport.once="'-200px 0px'" class="about-me__image">
         <img src="~/assets/images/me.png" />
       </div>
       <div class="about-me__text">
         <span class="title drop-cap">I</span>'m Anna, a mostly front-end but
         kind of full-stack developer 👩‍💻 I like Vue.js, algorithms, GraphQL and
         generally fiddling around learning new stuff. I'm a maths graduate from
-        the UK who completed a coding bootcamp 3 years ago. Since then I've
-        worked at Holaluz, Typeform and I'm currently working remotely for
-        Codegram. I love sharing my passion for coding through giving workshops
-        and mentorship to aspiring developers. As you can see I'm a fan of an
-        emoji or two 😆. In my free time you can usually find me up a mountain
-        on my bike or eating curry.
+        the UK but have been living in Sunny Barcelona ☀️ for the past 9 years
+        where I've worked for Holaluz, Typeform and currently I'm working
+        remotely for Codegram. I love sharing my passion for coding through
+        giving workshops and mentorship to aspiring developers. In my free time
+        you can usually find me up a mountain on my bike 🚲 or eating curry 🍛.
       </div>
     </div>
   </section>
@@ -30,6 +29,8 @@ export default {}
   flex-direction: column;
   scroll-snap-align: start;
   padding-bottom: 48px;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 .about-me {
   display: flex;
@@ -48,22 +49,42 @@ export default {}
     flex-direction: row;
   }
   &__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 120px;
+    @media screen and (min-width: 400px) {
+      height: 200px;
+      width: 200px;
+    }
+    @media screen and (min-width: 600px) {
+      height: 230px;
+      width: 230px;
+    }
     img {
-      height: 120px;
-      width: 120px;
+      height: 20px;
+      width: 20px;
       border-radius: 50%;
       object-fit: cover;
-      @media screen and (min-width: 400px) {
-        height: 200px;
-        width: 200px;
-      }
-      @media screen and (min-width: 600px) {
-        height: 230px;
-        width: 230px;
-      }
+      transition: all 1s ease-in;
     }
     @media screen and (min-width: 800px) {
       margin-right: 56px;
+    }
+    &.in-viewport {
+      img {
+        height: 100px;
+        width: 100px;
+        @media screen and (min-width: 400px) {
+          height: 200px;
+          width: 200px;
+        }
+        @media screen and (min-width: 600px) {
+          height: 230px;
+          width: 230px;
+        }
+      }
     }
   }
   &__text {
@@ -72,9 +93,6 @@ export default {}
     @media screen and (min-width: 450px) {
       font-size: 18px;
       line-height: 1.4;
-    }
-    @media screen and (min-width: 800px) {
-      max-width: 600px;
     }
   }
 }

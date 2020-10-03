@@ -1,6 +1,6 @@
 <template>
-  <div id="intro" class="container">
-    <section class="intro">
+  <section id="intro" class="container">
+    <div class="intro">
       <div />
       <client-only>
         <vue-typer
@@ -15,8 +15,8 @@
         />
       </client-only>
       <div class="chevron">⌄</div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>

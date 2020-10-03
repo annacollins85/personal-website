@@ -49,7 +49,10 @@ export default {
 
   css: ['~/assets/styles/index.scss'],
 
-  plugins: [{ src: '~/plugins/vue-typer.js', ssr: false }],
+  plugins: [
+    { src: '~/plugins/vue-typer.js', ssr: false },
+    '~/plugins/in-viewport.js',
+  ],
 
   components: true,
 
