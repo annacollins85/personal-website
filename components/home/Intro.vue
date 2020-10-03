@@ -6,7 +6,7 @@
         <vue-typer
           class="title intro__typewriter"
           text="Hello! 👋 I'm Anna, a JavaScript developer"
-          :repeat="0"
+          :erase-delay="500"
         />
         <vue-typer
           class="title intro__typewriter-mobile"
@@ -62,5 +62,8 @@
   text-decoration: none;
   font-size: 36px;
   padding-bottom: 0.8rem;
+}
+/deep/ .vue-typer .custom.char.selected {
+  background-color: rgba(3, 252, 198, 0.4);
 }
 </style>

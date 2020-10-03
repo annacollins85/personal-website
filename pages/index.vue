@@ -35,8 +35,8 @@ export default {
   height: 100vh;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
-  @media screen and (max-width: 799px) {
-    scroll-padding-top: 48px;
+  @media screen and (max-width: 750px) {
+    scroll-padding-top: 24px;
   }
 }
 ::-webkit-scrollbar {
