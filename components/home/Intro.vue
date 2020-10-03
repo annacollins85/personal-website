@@ -33,11 +33,14 @@
 .intro {
   min-height: 100vh;
   margin: 0 auto;
-  padding: 0 56px;
+  padding: 0 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   white-space: wrap;
+  @media screen and (min-width: 600px) {
+    padding: 0 56px;
+  }
   &__typewriter {
     display: none;
     @media screen and (min-width: 605px) {

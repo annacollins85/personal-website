@@ -1,5 +1,5 @@
 <template>
-  <div id="home" class="home">
+  <div class="home">
     <NavBar />
     <Intro />
     <AboutMe />

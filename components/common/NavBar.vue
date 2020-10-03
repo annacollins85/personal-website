@@ -106,7 +106,7 @@ export default {
   width: 100%;
   position: fixed;
   z-index: 1;
-  padding: 48px 64px 48px 0;
+  padding: 48px 80px 48px 0;
   @media screen and (max-width: 799px) {
     top: 0;
     left: 0;
@@ -120,7 +120,7 @@ export default {
     padding: 16px;
     box-shadow: 0 0.5rem 1rem 0 rgba(grey, 0.2);
     @media screen and (min-width: 800px) {
-      padding: 24px 64px 24px 0;
+      padding: 24px 80px 24px 0;
     }
   }
   &__content {
