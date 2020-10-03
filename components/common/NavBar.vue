@@ -154,11 +154,9 @@ export default {
   justify-content: flex-end;
   @media screen and (max-width: 799px) {
     display: block;
-    width: 100%;
     position: absolute;
     top: 100%;
     left: 0;
-    overflow: auto;
     &--hidden {
       display: none;
     }
@@ -167,15 +165,22 @@ export default {
     margin: 0;
     padding: 0;
     list-style: none;
+    padding-left: 32px;
     @media screen and (min-width: 800px) {
       display: flex;
+      padding-left: 0;
     }
   }
   &__link {
+    display: block;
     margin-right: 24px;
+    margin-bottom: 48px;
     font-size: 16px;
     font-family: 'Merriweather', sans-serif;
     font-weight: 500;
+    @media screen and (min-width: 800px) {
+      margin-bottom: 0;
+    }
     a {
       text-decoration: none;
       color: black;

@@ -36,7 +36,7 @@ export default {
 
 <style lang="scss" scoped>
 .blog-posts {
-  padding: 140px 32px 64px;
+  padding: 96px 32px 64px;
   margin: 0 auto;
   max-width: 1024px;
   @media screen and (min-width: 600px) {
@@ -44,6 +44,10 @@ export default {
   }
   &__title {
     margin-bottom: 56px;
+    font-size: 24px;
+    @media screen and (min-width: 600px) {
+      font-size: 32px;
+    }
   }
   &__list {
     display: flex;

@@ -1,0 +1,27 @@
+[
+  {
+    "image": "https://i.ibb.co/093DJKS/talk-pic.jpg",
+    "title": "GraphQL 101",
+    "type": "talk",
+    "lead": "A quick look at what GraphQL is, how to write a simple server, how to make queries, and what benefits it can have over REST.",
+    "date": " Jan 29, 2020",
+    "location": "Full Stack Vallés Meetup, Terrassa "
+  },
+  {
+    "image": "https://scontent-cdg2-1.cdninstagram.com/v/t51.2885-15/e35/22070931_1892440987676836_8496094482909888512_n.jpg?_nc_ht=scontent-cdg2-1.cdninstagram.com&_nc_cat=104&_nc_ohc=hiYy-iIcGgUAX_W09vQ&_nc_tp=18&oh=d27df6ed7d591cd52eaebe81aad16a8b&oe=5FA07B47",
+    "title": "An introduction to GraphQL",
+    "type": "workshop",
+    "lead": "An itroductory workshop given to students on the full-stack coding bootcamp. Students wrote a small GraphQL server by the end of the workshop.",
+    "date": " Mar 5, 2020",
+    "location": "CodeOP full-stack development bootcamp "
+  },
+  {
+    "image": "http://i3.ytimg.com/vi/s4wyO4kDVOY/hqdefault.jpg",
+    "title": "Programe en 6 meses ¡YA!",
+    "type": "podcast",
+    "url": "https://www.youtube.com/watch?v=s4wyO4kDVOY",
+    "lead": "As a guest on the podcast \"Todo Está Mal\" I talk about my experience of coding bootcamps and we discuss the pros and cons of the route into software development. (in Spanish)",
+    "date": " Jul 20, 2020",
+    "location": "Todo Está Mal podcast "
+  }
+]

@@ -57,4 +57,6 @@ export default {
   components: true,
 
   buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/stylelint-module'],
+
+  modules: ['nuxt-svg-loader'],
 }

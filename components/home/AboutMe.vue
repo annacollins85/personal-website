@@ -66,11 +66,11 @@ export default {}
       margin-right: 56px;
     }
     img {
-      height: 20px;
-      width: 20px;
+      height: 0;
+      width: 0;
       border-radius: 50%;
       object-fit: cover;
-      transition: all 1s ease-in;
+      transition: all 0.8s ease-in;
     }
     &.in-viewport {
       img {
