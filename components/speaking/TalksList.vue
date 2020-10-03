@@ -1,6 +1,6 @@
 <template>
   <section class="talks">
-    <h1 class="title talks__title">Say it out loud 🗣️</h1>
+    <h1 class="title talks__title">Speaking 🗣️</h1>
     <div v-for="talk in talksList" :key="talk.title">
       <a
         v-if="talk.url"

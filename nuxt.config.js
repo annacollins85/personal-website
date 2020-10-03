@@ -1,7 +1,7 @@
 export default {
   mode: 'universal',
   head: {
-    title: process.env.npm_package_name || '',
+    title: "Anna Collins' website",
     meta: [
       {
         charset: 'utf-8',
