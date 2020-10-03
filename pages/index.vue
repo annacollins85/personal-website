@@ -1,5 +1,6 @@
 <template>
-  <div class="home">
+  <div id="home" class="home">
+    <NavBar />
     <Intro />
     <AboutMe />
     <Footer />
@@ -7,12 +8,14 @@
 </template>
 
 <script>
+import NavBar from '~/components/common/NavBar'
 import AboutMe from '~/components/home/AboutMe'
 import Intro from '~/components/home/Intro'
 import Footer from '~/components/common/Footer'
 
 export default {
   components: {
+    NavBar,
     AboutMe,
     Intro,
     Footer,
@@ -32,6 +35,9 @@ export default {
   height: 100vh;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
+  @media screen and (max-width: 799px) {
+    scroll-padding-top: 48px;
+  }
 }
 ::-webkit-scrollbar {
   width: 0;

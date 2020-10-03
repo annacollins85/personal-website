@@ -1,21 +1,28 @@
 <template>
-  <slice-zone type="posts" uid="posts-list" class="posts" />
+  <div>
+    <NavBar />
+    POSTS
+  </div>
 </template>
 
 <script>
-import SliceZone from 'vue-slicezone'
+import NavBar from '~/components/common/NavBar'
 
 export default {
   components: {
-    SliceZone,
+    NavBar,
   },
+  // mounted() {
+  //   this.$nextTick(() => {
+  //     this.$emit('pageLoaded')
+  //   })
+  // },
 }
 </script>
 
 <style lang="scss" scoped>
-.posts,
-div > div {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.posts {
+  max-width: 812px;
+  margin: 0 auto;
 }
 </style>

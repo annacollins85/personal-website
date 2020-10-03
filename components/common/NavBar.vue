@@ -1,25 +1,48 @@
 <template>
-  <header class="navbar">
-    <div
-      v-for="link in links"
-      :key="link.text"
-      class="navbar__link"
-      :class="currentPath === link.to && 'navbar__link--current'"
-    >
-      <a v-if="link.href" :href="link.href" target="_blank">
-        {{ link.text }}
-      </a>
-      <nuxt-link v-else :to="link.to">
-        {{ link.text }}
-      </nuxt-link>
-    </div>
-  </header>
+  <div>
+    <div v-show="isMenuVisible" class="overlay" />
+    <header class="header" :class="scrolled && 'header--scrolled'">
+      <div class="header__content">
+        <button class="header__toggle" @click="toggleMenu">
+          <Burger :open="isMenuVisible" />
+        </button>
+        <nav :class="`menu ${isMenuVisible ? '' : 'menu--hidden'}`">
+          <ul class="menu__links">
+            <li
+              v-for="link in links"
+              :key="link.text"
+              class="menu__link"
+              :class="currentPath === link.to && 'menu__link--current'"
+              @click="closeMenu"
+            >
+              <a v-if="link.href" :href="link.href" target="_blank">
+                {{ link.text }}
+              </a>
+              <nuxt-link v-else :to="link.to">
+                {{ link.text }}
+              </nuxt-link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </div>
 </template>
 
 <script>
+import throttle from 'lodash.throttle'
+import Burger from '~/components/common/Burger'
+
 export default {
+  components: {
+    Burger,
+  },
   data() {
     return {
+      scrolled: false,
+      throttleHandleScroll: null,
+      isMenuVisible: false,
+      content: null,
       links: [
         {
           to: '/',
@@ -50,23 +73,100 @@ export default {
       return this.$route.path
     },
   },
+  watch: {
+    $route() {
+      this.closeMenu()
+    },
+  },
+  mounted() {
+    this.throttleHandleScroll = throttle(this.handleScroll, 100)
+    this.content = document.getElementById('content')
+    this.content.addEventListener('scroll', this.throttleHandleScroll)
+    this.scrolled = window.scrollY > 30
+  },
+  destroyed() {
+    this.content.removeEventListener('scroll', this.throttleHandleScroll)
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuVisible = !this.isMenuVisible
+    },
+    closeMenu() {
+      this.isMenuVisible = false
+    },
+    handleScroll() {
+      this.scrolled = this.content.scrollTop > 30
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
-.navbar {
-  position: absolute;
-  display: flex;
-  justify-content: flex-end;
-  top: 0;
-  left: 0;
-  padding: 48px;
+.header {
   width: 100%;
-  text-align: right;
+  position: fixed;
   z-index: 1;
+  padding: 48px 64px 48px 0;
+  @media screen and (max-width: 799px) {
+    top: 0;
+    left: 0;
+    padding: 24px;
+  }
+
+  transition: padding 0.5s ease;
+  &--scrolled {
+    z-index: 1;
+    background-color: white;
+    padding: 12px;
+    box-shadow: 0 0.5rem 1rem 0 rgba(grey, 0.2);
+    @media screen and (min-width: 800px) {
+      padding: 24px 64px 24px 0;
+    }
+  }
+  &__content {
+    display: flex;
+    justify-content: flex-end;
+    @media screen and (min-width: 800px) {
+      justify-content: space-between;
+    }
+  }
+  &__toggle {
+    display: flex;
+    transition: all 0.3s;
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+    @media screen and (min-width: 800px) {
+      display: none;
+    }
+  }
+}
+.menu {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  @media screen and (max-width: 799px) {
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    overflow: auto;
+    &--hidden {
+      display: none;
+    }
+  }
+  &__links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @media screen and (min-width: 800px) {
+      display: flex;
+    }
+  }
   &__link {
     margin-right: 24px;
-    color: black;
     font-size: 16px;
     font-family: 'Merriweather', sans-serif;
     font-weight: 500;
@@ -86,5 +186,14 @@ export default {
       border-bottom: 2px solid black;
     }
   }
+}
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: white;
 }
 </style>
