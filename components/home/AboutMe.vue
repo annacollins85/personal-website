@@ -52,15 +52,18 @@ export default {}
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120px;
-    width: 120px;
+    min-height: 120px;
+    min-width: 120px;
     @media screen and (min-width: 400px) {
-      height: 200px;
-      width: 200px;
+      min-height: 200px;
+      min-width: 200px;
     }
     @media screen and (min-width: 600px) {
-      height: 230px;
-      width: 230px;
+      min-height: 230px;
+      min-width: 230px;
+    }
+    @media screen and (min-width: 800px) {
+      margin-right: 56px;
     }
     img {
       height: 20px;
@@ -69,13 +72,10 @@ export default {}
       object-fit: cover;
       transition: all 1s ease-in;
     }
-    @media screen and (min-width: 800px) {
-      margin-right: 56px;
-    }
     &.in-viewport {
       img {
-        height: 100px;
-        width: 100px;
+        height: 120px;
+        width: 120px;
         @media screen and (min-width: 400px) {
           height: 200px;
           width: 200px;
@@ -90,6 +90,7 @@ export default {}
   &__text {
     display: block;
     line-height: 1.2;
+    max-width: 626px;
     @media screen and (min-width: 450px) {
       font-size: 18px;
       line-height: 1.4;

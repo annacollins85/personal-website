@@ -7,11 +7,15 @@
           class="title intro__typewriter"
           text="Hello! 👋 I'm Anna, a JavaScript developer"
           :erase-delay="500"
+          :pre-erase-delay="500"
+          :type-delay="110"
         />
         <vue-typer
           class="title intro__typewriter-mobile"
           :text="['Hello! 👋 I\'m Anna,', 'a JavaScript developer']"
+          :erase-delay="500"
           :pre-erase-delay="500"
+          :type-delay="110"
         />
       </client-only>
       <div class="chevron">⌄</div>
