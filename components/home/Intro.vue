@@ -2,7 +2,18 @@
   <div id="intro" class="container">
     <section class="intro">
       <div />
-      <h1 class="title">Hello! 👋 I'm Anna, a JavaScript developer</h1>
+      <client-only>
+        <vue-typer
+          class="title intro__typewriter"
+          text="Hello! 👋 I'm Anna, a JavaScript developer"
+          :repeat="0"
+        />
+        <vue-typer
+          class="title intro__typewriter-mobile"
+          :text="['Hello! 👋 I\'m Anna,', 'a JavaScript developer']"
+          :pre-erase-delay="500"
+        />
+      </client-only>
       <div class="chevron">⌄</div>
     </section>
   </div>
@@ -23,11 +34,33 @@
   flex-direction: column;
   justify-content: space-between;
   white-space: wrap;
+  &__typewriter {
+    display: none;
+    @media screen and (min-width: 605px) {
+      display: block;
+      font-size: 24px;
+    }
+    @media screen and (min-width: 800px) {
+      font-size: 28px;
+    }
+  }
+  &__typewriter-mobile {
+    font-size: 18px;
+    @media screen and (min-width: 350px) {
+      font-size: 20px;
+    }
+    @media screen and (min-width: 375px) {
+      font-size: 24px;
+    }
+    @media screen and (min-width: 604px) {
+      display: none;
+    }
+  }
 }
 .chevron {
   text-align: center;
   text-decoration: none;
   font-size: 36px;
-  padding-bottom: 0.25rem;
+  padding-bottom: 0.8rem;
 }
 </style>

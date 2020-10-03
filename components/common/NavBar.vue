@@ -117,7 +117,7 @@ export default {
   &--scrolled {
     z-index: 1;
     background-color: white;
-    padding: 12px;
+    padding: 16px;
     box-shadow: 0 0.5rem 1rem 0 rgba(grey, 0.2);
     @media screen and (min-width: 800px) {
       padding: 24px 64px 24px 0;
@@ -131,6 +131,10 @@ export default {
     }
   }
   &__toggle {
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
     display: flex;
     transition: all 0.3s;
     &:hover,
