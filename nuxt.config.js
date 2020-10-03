@@ -47,37 +47,11 @@ export default {
     ],
   },
 
-  css: [
-    'vue-essential-slices/src/styles/styles.scss',
-    '~/assets/styles/index.scss',
-  ],
+  css: ['~/assets/styles/index.scss'],
 
   plugins: [{ src: '~/plugins/vue-typer.js', ssr: false }],
 
   components: true,
 
   buildModules: ['@nuxtjs/eslint-module', '@nuxtjs/stylelint-module'],
-
-  modules: [
-    [
-      '@nuxtjs/prismic',
-      {
-        endpoint: 'https://annas-website.cdn.prismic.io/api/v2',
-        apiOptions: {
-          routes: [
-            {
-              type: 'posts',
-              path: '/posts',
-            },
-          ],
-        },
-      },
-    ],
-    ['nuxt-sm'],
-    'vue-scrollto/nuxt',
-  ],
-
-  build: {
-    transpile: ['vue-slicezone', 'nuxt-sm'],
-  },
 }
