@@ -37,7 +37,7 @@ export default {}
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  height: calc(100vh - 24px);
   padding: 0 32px;
   @media screen and (min-width: 600px) {
     padding: 0 56px;
@@ -47,6 +47,7 @@ export default {}
   }
   @media screen and (min-width: 800px) {
     flex-direction: row;
+    height: 100vh;
   }
   &__image {
     display: none;

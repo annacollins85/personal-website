@@ -165,6 +165,8 @@ export default {
     margin: 0;
     padding: 0;
     list-style: none;
+    float: left;
+    clear: both;
     padding-left: 32px;
     @media screen and (min-width: 800px) {
       display: flex;
@@ -187,14 +189,18 @@ export default {
       border-bottom: 2px solid transparent;
       transition: border-bottom 0.3s;
     }
-    &:last-child {
-      margin-right: 0;
+    &--current {
+      /deep/ a {
+        border-bottom: 2px solid black;
+      }
     }
     &:hover {
-      border-bottom: 2px solid black;
+      /deep/ a {
+        border-bottom: 2px solid black;
+      }
     }
-    &--current {
-      border-bottom: 2px solid black;
+    &:last-child {
+      margin-right: 0;
     }
   }
 }

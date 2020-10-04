@@ -30,7 +30,7 @@
   scroll-snap-align: start;
 }
 .intro {
-  height: 100vh;
+  height: calc(100vh - 24px);
   margin: 0 auto;
   padding: 0 32px;
   display: flex;
@@ -47,6 +47,7 @@
       font-size: 24px;
     }
     @media screen and (min-width: 800px) {
+      height: 100vh;
       font-size: 28px;
     }
   }
