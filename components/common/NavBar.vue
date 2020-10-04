@@ -3,6 +3,11 @@
     <div v-show="isMenuVisible" class="overlay" />
     <header class="header" :class="scrolled && 'header--scrolled'">
       <div class="header__content">
+        <div class="header__home" @click="toggleMenu">
+          <nuxt-link aria-label="link to home" to="/">
+            🏠
+          </nuxt-link>
+        </div>
         <button class="header__toggle" @click="toggleMenu">
           <Burger :open="isMenuVisible" />
         </button>
@@ -47,10 +52,9 @@ export default {
       scrolled: false,
       throttleHandleScroll: null,
       isMenuVisible: false,
-      content: null,
       links: [
         {
-          to: '/',
+          to: '/about-me',
           text: 'About Me',
         },
         {
@@ -85,13 +89,10 @@ export default {
   },
   mounted() {
     this.throttleHandleScroll = throttle(this.handleScroll, 100)
-    this.content = document.getElementById('content')
-    this.content.addEventListener('scroll', this.throttleHandleScroll)
     window.addEventListener('scroll', this.throttleHandleScroll)
     this.scrolled = window.scrollY > 30
   },
   destroyed() {
-    this.content.removeEventListener('scroll', this.throttleHandleScroll)
     window.removeEventListener('scroll', this.throttleHandleScroll)
   },
   methods: {
@@ -130,9 +131,15 @@ export default {
       padding: 24px 80px 24px 0;
     }
   }
+  &__home {
+    font-size: 32px;
+    @media screen and (min-width: 800px) {
+      padding-left: 80px;
+    }
+  }
   &__content {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     @media screen and (min-width: 800px) {
       justify-content: space-between;
     }
@@ -160,6 +167,7 @@ export default {
   @media screen and (max-width: 799px) {
     display: block;
     position: absolute;
+    padding-top: 32px;
     top: 100%;
     left: 0;
     &--hidden {

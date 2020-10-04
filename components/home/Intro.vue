@@ -1,7 +1,6 @@
 <template>
   <section id="intro" class="container">
     <div class="intro">
-      <div />
       <client-only>
         <vue-typer
           class="title intro__typewriter"
@@ -17,7 +16,6 @@
           :pre-erase-delay="500"
         />
       </client-only>
-      <div class="chevron">⌄</div>
     </div>
   </section>
 </template>
@@ -30,18 +28,15 @@
   scroll-snap-align: start;
 }
 .intro {
-  height: calc(100vh - 72px);
+  height: 100vh;
   margin: 0 auto;
   padding: 0 32px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   white-space: wrap;
   @media screen and (min-width: 600px) {
     padding: 0 56px;
-  }
-  @media screen and (min-width: 800px) {
-    min-height: 100vh;
   }
   &__typewriter {
     display: none;

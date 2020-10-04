@@ -24,20 +24,18 @@ export default {}
 
 <style lang="scss" scoped>
 .container {
-  position: relative;
   display: flex;
   flex-direction: column;
-  scroll-snap-align: start;
-  padding-bottom: 48px;
   max-width: 1024px;
   margin: 0 auto;
+  height: 100vh;
 }
 .about-me {
   display: flex;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 72px);
   padding: 0 32px;
   @media screen and (min-width: 600px) {
     padding: 0 56px;
@@ -47,7 +45,6 @@ export default {}
   }
   @media screen and (min-width: 800px) {
     flex-direction: row;
-    height: 100vh;
   }
   &__image {
     display: none;
