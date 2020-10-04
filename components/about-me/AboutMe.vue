@@ -2,7 +2,9 @@
   <section id="about-me" class="container">
     <div class="about-me">
       <div v-in-viewport.once="'-200px 0px'" class="about-me__image">
-        <img src="~/assets/images/me.png" />
+        <img
+          src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/120845337_10157918962057183_210831147419139539_n.jpg?_nc_cat=107&_nc_sid=0debeb&_nc_ohc=QOQHQ-95F48AX9t9KGf&_nc_ht=scontent-cdg2-1.xx&oh=9384bac6abe3e56f82b04f9400d5a81b&oe=5F9F4300"
+        />
       </div>
       <div class="about-me__text">
         <span class="title drop-cap">I</span>'m Anna, a mostly front-end but
