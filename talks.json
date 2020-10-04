@@ -1,6 +1,6 @@
 [
   {
-    "image": "https://i.ibb.co/093DJKS/talk-pic.jpg",
+    "image": "https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/120855489_10157918594977183_2175671292399822477_o.jpg?_nc_cat=103&_nc_sid=0debeb&_nc_ohc=h9vhvT6j0bMAX8xzsmt&_nc_oc=AQmoLnY5nVLoS1U623MflJMi-48gSqGVXxzAUKSqHwdBccoJc7-oHGw0txwnR3sA7X8&_nc_ht=scontent-cdt1-1.xx&oh=a07a07b97058db41e5b43a521862b67a&oe=5F9FF506",
     "title": "GraphQL 101",
     "type": "talk",
     "lead": "A quick look at what GraphQL is, how to write a simple server, how to make queries, and what benefits it can have over REST.",
@@ -16,7 +16,7 @@
     "location": "CodeOP full-stack development bootcamp "
   },
   {
-    "image": "http://i3.ytimg.com/vi/s4wyO4kDVOY/hqdefault.jpg",
+    "image": "https://img.youtube.com/vi/s4wyO4kDVOY/0.jpg",
     "title": "Programe en 6 meses ¡YA!",
     "type": "podcast",
     "url": "https://www.youtube.com/watch?v=s4wyO4kDVOY",
