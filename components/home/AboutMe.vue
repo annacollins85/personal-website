@@ -49,16 +49,11 @@ export default {}
     flex-direction: row;
   }
   &__image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 120px;
-    min-width: 120px;
-    @media screen and (min-width: 400px) {
-      min-height: 200px;
-      min-width: 200px;
-    }
+    display: none;
     @media screen and (min-width: 600px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       min-height: 230px;
       min-width: 230px;
     }
@@ -74,12 +69,6 @@ export default {}
     }
     &.in-viewport {
       img {
-        height: 120px;
-        width: 120px;
-        @media screen and (min-width: 400px) {
-          height: 200px;
-          width: 200px;
-        }
         @media screen and (min-width: 600px) {
           height: 230px;
           width: 230px;
@@ -89,7 +78,7 @@ export default {}
   }
   &__text {
     display: block;
-    line-height: 1.2;
+    line-height: 1.4;
     max-width: 626px;
     @media screen and (min-width: 450px) {
       font-size: 18px;

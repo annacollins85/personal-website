@@ -8,6 +8,7 @@
           text="Hello! 👋 I'm Anna, a JavaScript developer"
           :erase-delay="500"
           :pre-erase-delay="500"
+          :repeat="0"
         />
         <vue-typer
           class="title intro__typewriter-mobile"
@@ -29,7 +30,7 @@
   scroll-snap-align: start;
 }
 .intro {
-  min-height: 100vh;
+  height: 100vh;
   margin: 0 auto;
   padding: 0 32px;
   display: flex;
