@@ -4,16 +4,14 @@
       <client-only>
         <vue-typer
           class="title intro__typewriter"
-          text="Hello! 👋 I'm Anna, a JavaScript developer"
+          :text="[
+            'Hello! 👋 I\'m Anna,',
+            'a JavaScript developer 👩‍💻',
+            'Welcome to my web! 🕸',
+          ]"
           :erase-delay="500"
           :pre-erase-delay="500"
           :repeat="0"
-        />
-        <vue-typer
-          class="title intro__typewriter-mobile"
-          :text="['Hello! 👋 I\'m Anna,', 'a JavaScript developer']"
-          :erase-delay="500"
-          :pre-erase-delay="500"
         />
       </client-only>
     </div>
@@ -39,16 +37,6 @@
     padding: 0 56px;
   }
   &__typewriter {
-    display: none;
-    @media screen and (min-width: 605px) {
-      display: block;
-      font-size: 24px;
-    }
-    @media screen and (min-width: 800px) {
-      font-size: 28px;
-    }
-  }
-  &__typewriter-mobile {
     font-size: 18px;
     @media screen and (min-width: 350px) {
       font-size: 20px;
@@ -56,8 +44,11 @@
     @media screen and (min-width: 375px) {
       font-size: 24px;
     }
-    @media screen and (min-width: 604px) {
-      display: none;
+    @media screen and (min-width: 605px) {
+      font-size: 28px;
+    }
+    @media screen and (min-width: 800px) {
+      font-size: 32px;
     }
   }
 }

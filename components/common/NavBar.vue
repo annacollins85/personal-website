@@ -51,6 +51,7 @@ export default {
     return {
       scrolled: false,
       throttleHandleScroll: null,
+      content: null,
       isMenuVisible: false,
       links: [
         {
@@ -89,10 +90,13 @@ export default {
   },
   mounted() {
     this.throttleHandleScroll = throttle(this.handleScroll, 100)
+    this.content = document.getElementById('content')
+    this.content.addEventListener('scroll', this.throttleHandleScroll)
     window.addEventListener('scroll', this.throttleHandleScroll)
     this.scrolled = window.scrollY > 30
   },
   destroyed() {
+    this.content.removeEventListener('scroll', this.throttleHandleScroll)
     window.removeEventListener('scroll', this.throttleHandleScroll)
   },
   methods: {
@@ -183,6 +187,7 @@ export default {
     padding-left: 32px;
     @media screen and (min-width: 800px) {
       display: flex;
+      align-items: center;
       padding-left: 0;
     }
   }
