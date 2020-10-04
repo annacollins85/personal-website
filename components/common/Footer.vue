@@ -1,10 +1,16 @@
 <template>
   <section class="footer">
-    <a href="https://twitter.com/annacol19"><TwitterIcon /></a>
-    <a href="https://www.linkedin.com/in/anna-collins/"><LinkedInIcon /></a>
-    <a href="https://github.com/annacollins85"><GitHubIcon /></a>
-    <a href="https://www.strava.com/athletes/23471847"><StravaIcon /></a>
-    <a href="mailto:annacollins85@gmail.com"><GmailIcon /></a>
+    <a href="https://twitter.com/annacol19" target="_blank"><TwitterIcon /></a>
+    <a href="https://www.linkedin.com/in/anna-collins/" target="_blank"
+      ><LinkedInIcon
+    /></a>
+    <a href="https://github.com/annacollins85" target="_blank"
+      ><GitHubIcon
+    /></a>
+    <a href="https://www.strava.com/athletes/23471847" target="_blank"
+      ><StravaIcon
+    /></a>
+    <a href="mailto:annacollins85@gmail.com" target="_blank"><GmailIcon /></a>
   </section>
 </template>
 
