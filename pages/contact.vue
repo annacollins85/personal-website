@@ -4,11 +4,41 @@
     <section class="contact">
       <h1 class="title contact__title">Get in touch ✍️</h1>
       <div class="contact__links">
-        <a href="https://twitter.com/annacol19"><TwitterIcon /></a>
-        <a href="https://www.linkedin.com/in/anna-collins/"><LinkedInIcon /></a>
-        <a href="https://github.com/annacollins85"><GitHubIcon /></a>
-        <a href="https://www.strava.com/athletes/23471847"><StravaIcon /></a>
-        <a href="mailto:annacollins85@gmail.com"><GmailIcon /></a>
+        <a
+          href="https://twitter.com/annacol19"
+          target="_blank"
+          aria-label="link to Twitter"
+          rel="noopener"
+          ><TwitterIcon
+        /></a>
+        <a
+          href="https://www.linkedin.com/in/anna-collins/"
+          target="_blank"
+          aria-label="link to LinkedIn"
+          rel="noopener"
+          ><LinkedInIcon
+        /></a>
+        <a
+          href="https://github.com/annacollins85"
+          target="_blank"
+          aria-label="link to GitHub"
+          rel="noopener"
+          ><GitHubIcon
+        /></a>
+        <a
+          href="https://www.strava.com/athletes/23471847"
+          target="_blank"
+          aria-label="link to Strava"
+          rel="noopener"
+          ><StravaIcon
+        /></a>
+        <a
+          href="mailto:annacollins85@gmail.com"
+          target="_blank"
+          aria-label="email anna@collins85@gmail.com"
+          rel="noopener"
+          ><GmailIcon
+        /></a>
       </div>
     </section>
   </div>

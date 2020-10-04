@@ -5,6 +5,7 @@
       <a
         v-if="talk.url"
         :href="talk.url"
+        aria-label="link to watch talk"
         target="_blank"
         class="talk talk--link"
       >

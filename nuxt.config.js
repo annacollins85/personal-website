@@ -1,7 +1,11 @@
 export default {
   mode: 'universal',
   head: {
-    title: "Anna Collins' website",
+    title: "Anna Collins' web 🕸",
+    description: "A dev's little personal website",
+    htmlAttrs: {
+      lang: 'en',
+    },
     meta: [
       {
         charset: 'utf-8',

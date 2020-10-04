@@ -7,7 +7,9 @@
         :key="post.title"
         class="post"
         :href="post.url"
+        rel="noopener"
         target="_blank"
+        :aria-label="`go to ${post.title} blog post`"
       >
         <div class="post__image">
           <img :src="post.image" />

@@ -15,7 +15,12 @@
               :class="currentPath === link.to && 'menu__link--current'"
               @click="closeMenu"
             >
-              <a v-if="link.href" :href="link.href" target="_blank">
+              <a
+                v-if="link.href"
+                :href="link.href"
+                target="_blank"
+                rel="noopener"
+              >
                 {{ link.text }}
               </a>
               <nuxt-link v-else :to="link.to">
