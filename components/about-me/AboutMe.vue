@@ -2,7 +2,7 @@
   <section id="about-me" class="container">
     <div class="about-me">
       <div v-in-viewport.once="'-200px 0px'" class="about-me__image">
-        <img src="~/assets/images/me.jpg" />
+        <img src="~/assets/images/me.png" />
       </div>
       <div class="about-me__text">
         <span class="title drop-cap">I</span>'m Anna, a mostly front-end but
