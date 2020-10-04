@@ -17,7 +17,10 @@
               v-for="link in links"
               :key="link.text"
               class="menu__link"
-              :class="currentPath === link.to && 'menu__link--current'"
+              :class="
+                (currentPath === link.to || initialPath === link.to) &&
+                'menu__link--current'
+              "
               @click="closeMenu"
             >
               <a
@@ -52,6 +55,7 @@ export default {
       scrolled: false,
       throttleHandleScroll: null,
       content: null,
+      initialPath: null,
       isMenuVisible: false,
       links: [
         {
@@ -89,6 +93,7 @@ export default {
     },
   },
   mounted() {
+    this.initialPath = this.$route.path
     this.throttleHandleScroll = throttle(this.handleScroll, 100)
     this.content = document.getElementById('content')
     this.content.addEventListener('scroll', this.throttleHandleScroll)
