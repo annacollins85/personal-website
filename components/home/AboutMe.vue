@@ -37,7 +37,7 @@ export default {}
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 24px);
+  height: calc(100vh - 72px);
   padding: 0 32px;
   @media screen and (min-width: 600px) {
     padding: 0 56px;

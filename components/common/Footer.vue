@@ -30,8 +30,7 @@ export default {
 .footer {
   position: relative;
   scroll-snap-align: start;
-  min-height: 150px;
-  padding: 56px 56px 56px;
+  padding: 56px 56px 56px 56px;
   display: flex;
   align-items: center;
   justify-content: center;

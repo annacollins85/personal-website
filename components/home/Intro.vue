@@ -30,7 +30,7 @@
   scroll-snap-align: start;
 }
 .intro {
-  height: calc(100vh - 24px);
+  height: calc(100vh - 72px);
   margin: 0 auto;
   padding: 0 32px;
   display: flex;
@@ -40,6 +40,9 @@
   @media screen and (min-width: 600px) {
     padding: 0 56px;
   }
+  @media screen and (min-width: 800px) {
+    min-height: 100vh;
+  }
   &__typewriter {
     display: none;
     @media screen and (min-width: 605px) {
@@ -47,7 +50,6 @@
       font-size: 24px;
     }
     @media screen and (min-width: 800px) {
-      height: 100vh;
       font-size: 28px;
     }
   }
@@ -68,7 +70,10 @@
   text-align: center;
   text-decoration: none;
   font-size: 36px;
-  padding-bottom: 0.8rem;
+
+  @media screen and (min-width: 800px) {
+    padding-bottom: 0.8rem;
+  }
 }
 /deep/ .vue-typer .custom.char.selected {
   background-color: rgba(3, 252, 198, 0.4);
