@@ -4,7 +4,7 @@
     <header class="header" :class="scrolled && 'header--scrolled'">
       <div class="header__content">
         <div class="header__home" @click="toggleMenu">
-          <nuxt-link aria-label="link to home" to="/">
+          <nuxt-link aria-label="link to homepage" to="/">
             🏠
           </nuxt-link>
         </div>
