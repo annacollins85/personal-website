@@ -1,20 +1,20 @@
 <template>
   <div class="home">
     <NavBar />
-    <Intro />
+    <AboutMe />
     <Footer />
   </div>
 </template>
 
 <script>
 import NavBar from '~/components/common/NavBar'
-import Intro from '~/components/home/Intro'
+import AboutMe from '~/components/about-me/AboutMe'
 import Footer from '~/components/common/Footer'
 
 export default {
   components: {
     NavBar,
-    Intro,
+    AboutMe,
     Footer,
   },
 }

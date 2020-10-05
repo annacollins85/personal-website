@@ -2,7 +2,9 @@
   <section id="about-me" class="container">
     <div class="about-me">
       <div v-in-viewport.once="'-200px 0px'" class="about-me__image">
-        <img src="~/assets/images/me.png" />
+        <img
+          src="https://scontent-cdg2-1.xx.fbcdn.net/v/t1.0-9/120845337_10157918962057183_210831147419139539_n.jpg?_nc_cat=107&_nc_sid=0debeb&_nc_ohc=QOQHQ-95F48AX9t9KGf&_nc_ht=scontent-cdg2-1.xx&oh=9384bac6abe3e56f82b04f9400d5a81b&oe=5F9F4300"
+        />
       </div>
       <div class="about-me__text">
         <span class="title drop-cap">I</span>'m Anna, a mostly front-end but
@@ -24,20 +26,18 @@ export default {}
 
 <style lang="scss" scoped>
 .container {
-  position: relative;
   display: flex;
   flex-direction: column;
-  scroll-snap-align: start;
-  padding-bottom: 48px;
   max-width: 1024px;
   margin: 0 auto;
+  height: 100vh;
 }
 .about-me {
   display: flex;
+  height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 72px);
   padding: 0 32px;
   @media screen and (min-width: 600px) {
     padding: 0 56px;
@@ -47,7 +47,6 @@ export default {}
   }
   @media screen and (min-width: 800px) {
     flex-direction: row;
-    height: 100vh;
   }
   &__image {
     display: none;

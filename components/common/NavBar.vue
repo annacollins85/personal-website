@@ -3,6 +3,11 @@
     <div v-show="isMenuVisible" class="overlay" />
     <header class="header" :class="scrolled && 'header--scrolled'">
       <div class="header__content">
+        <div class="header__home" @click="toggleMenu">
+          <nuxt-link aria-label="link to homepage" to="/">
+            🏠
+          </nuxt-link>
+        </div>
         <button class="header__toggle" @click="toggleMenu">
           <Burger :open="isMenuVisible" />
         </button>
@@ -12,7 +17,10 @@
               v-for="link in links"
               :key="link.text"
               class="menu__link"
-              :class="currentPath === link.to && 'menu__link--current'"
+              :class="
+                (currentPath === link.to || initialPath === link.to) &&
+                'menu__link--current'
+              "
               @click="closeMenu"
             >
               <a
@@ -46,11 +54,12 @@ export default {
     return {
       scrolled: false,
       throttleHandleScroll: null,
-      isMenuVisible: false,
       content: null,
+      initialPath: null,
+      isMenuVisible: false,
       links: [
         {
-          to: '/',
+          to: '/about-me',
           text: 'About Me',
         },
         {
@@ -84,6 +93,7 @@ export default {
     },
   },
   mounted() {
+    this.initialPath = this.$route.path
     this.throttleHandleScroll = throttle(this.handleScroll, 100)
     this.content = document.getElementById('content')
     this.content.addEventListener('scroll', this.throttleHandleScroll)
@@ -130,9 +140,15 @@ export default {
       padding: 24px 80px 24px 0;
     }
   }
+  &__home {
+    font-size: 32px;
+    @media screen and (min-width: 800px) {
+      padding-left: 80px;
+    }
+  }
   &__content {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     @media screen and (min-width: 800px) {
       justify-content: space-between;
     }
@@ -160,6 +176,7 @@ export default {
   @media screen and (max-width: 799px) {
     display: block;
     position: absolute;
+    padding-top: 32px;
     top: 100%;
     left: 0;
     &--hidden {
@@ -175,6 +192,7 @@ export default {
     padding-left: 32px;
     @media screen and (min-width: 800px) {
       display: flex;
+      align-items: center;
       padding-left: 0;
     }
   }
