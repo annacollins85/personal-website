@@ -11,10 +11,10 @@
         kind of full-stack developer 👩‍💻 I like Vue.js, algorithms, GraphQL and
         generally fiddling around learning new stuff. I'm a maths graduate from
         the UK but have been living in Sunny Barcelona ☀️ for the past 9 years
-        where I've worked for Holaluz, Typeform and currently I'm working
-        remotely for Codegram. I love sharing my passion for coding through
-        giving workshops and mentorship to aspiring developers. In my free time
-        you can usually find me up a mountain on my bike 🚲.
+        where I've worked for Holaluz, Typeform and currently work remotely for
+        Codegram. I love sharing my passion for coding through giving workshops
+        and mentorship to aspiring developers. In my free time you can usually
+        find me up a mountain on my bike 🚲.
       </div>
     </div>
   </section>

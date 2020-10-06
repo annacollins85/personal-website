@@ -3,7 +3,7 @@
     <div v-show="isMenuVisible" class="overlay" />
     <header class="header" :class="scrolled && 'header--scrolled'">
       <div class="header__content">
-        <div class="header__home" @click="toggleMenu">
+        <div class="header__home" @click="closeMenu">
           <nuxt-link aria-label="link to homepage" to="/">
             🏠
           </nuxt-link>
@@ -144,6 +144,9 @@ export default {
     font-size: 32px;
     @media screen and (min-width: 800px) {
       padding-left: 80px;
+    }
+    a {
+      text-decoration: none;
     }
   }
   &__content {

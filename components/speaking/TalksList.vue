@@ -101,8 +101,6 @@ export default {
   }
   &--link {
     &:hover {
-      transition: all 0.3s;
-      transform: translate(2px, -2px);
       /deep/ img {
         border: 3px solid rgba(3, 252, 198, 0.4);
       }
