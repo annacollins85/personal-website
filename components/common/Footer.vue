@@ -58,12 +58,14 @@ export default {
 
 <style lang="scss" scoped>
 .footer {
-  position: relative;
-  scroll-snap-align: start;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   padding: 56px 56px 56px 56px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100vw;
   a {
     text-decoration: none;
     &:hover {

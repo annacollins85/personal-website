@@ -1,21 +1,15 @@
 <template>
-  <div class="home">
-    <NavBar />
+  <div>
     <Intro />
-    <Footer />
   </div>
 </template>
 
 <script>
-import NavBar from '~/components/common/NavBar'
 import Intro from '~/components/home/Intro'
-import Footer from '~/components/common/Footer'
 
 export default {
   components: {
-    NavBar,
     Intro,
-    Footer,
   },
 }
 </script>

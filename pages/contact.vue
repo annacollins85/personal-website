@@ -1,6 +1,5 @@
 <template>
   <div>
-    <NavBar />
     <section class="contact">
       <h1 class="title contact__title">Get in touch ✍️</h1>
       <div class="contact__links">
@@ -45,7 +44,6 @@
 </template>
 
 <script>
-import NavBar from '~/components/common/NavBar'
 import TwitterIcon from '~/assets/icons/twitter.svg'
 import LinkedInIcon from '~/assets/icons/linkedin.svg'
 import GitHubIcon from '~/assets/icons/github.svg'
@@ -54,7 +52,6 @@ import GmailIcon from '~/assets/icons/gmail.svg'
 
 export default {
   components: {
-    NavBar,
     TwitterIcon,
     LinkedInIcon,
     GitHubIcon,

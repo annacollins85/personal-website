@@ -54,7 +54,6 @@ export default {
     return {
       scrolled: false,
       throttleHandleScroll: null,
-      content: null,
       initialPath: null,
       isMenuVisible: false,
       links: [
@@ -95,13 +94,10 @@ export default {
   mounted() {
     this.initialPath = this.$route.path
     this.throttleHandleScroll = throttle(this.handleScroll, 100)
-    this.content = document.getElementById('content')
-    this.content.addEventListener('scroll', this.throttleHandleScroll)
     window.addEventListener('scroll', this.throttleHandleScroll)
     this.scrolled = window.scrollY > 30
   },
   destroyed() {
-    this.content.removeEventListener('scroll', this.throttleHandleScroll)
     window.removeEventListener('scroll', this.throttleHandleScroll)
   },
   methods: {
@@ -112,7 +108,7 @@ export default {
       this.isMenuVisible = false
     },
     handleScroll() {
-      this.scrolled = this.content.scrollTop > 30 || window.scrollY > 30
+      this.scrolled = window.scrollY > 30
     },
   },
 }

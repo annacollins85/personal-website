@@ -52,11 +52,11 @@ export default {
 
 <style lang="scss" scoped>
 .talks {
-  padding: 96px 32px 0;
+  padding: 96px 32px 152px;
   margin: 0 auto;
   max-width: 1024px;
   @media screen and (min-width: 800px) {
-    padding: 140px 56px 160px;
+    padding: 140px 56px 260px;
   }
   &__title {
     margin-bottom: 56px;

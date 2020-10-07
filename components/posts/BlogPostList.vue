@@ -38,11 +38,11 @@ export default {
 
 <style lang="scss" scoped>
 .blog-posts {
-  padding: 96px 32px 64px;
+  padding: 96px 32px 160px;
   margin: 0 auto;
   max-width: 1024px;
   @media screen and (min-width: 600px) {
-    padding: 140px 56px 160px;
+    padding: 140px 56px 260px;
   }
   &__title {
     margin-bottom: 56px;
