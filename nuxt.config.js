@@ -2,7 +2,6 @@ export default {
   mode: 'universal',
   head: {
     title: "Anna Collins' web 🕸",
-    description: "A dev's little personal website",
     htmlAttrs: {
       lang: 'en',
     },
@@ -17,7 +16,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content: "A dev's personal website",
       },
     ],
     link: [
